@@ -13,7 +13,10 @@ def main():
     bg_img2 = pg.transform.flip(bg_img,True,False)
     kk_img = pg.image.load("fig/3.png")
     kk_img = pg.transform.flip(kk_img,True,False)
+    kk_rct = kk_img.get_rect()
+    kk_rct.center = 300, 200
     tmr = 0
+    
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
